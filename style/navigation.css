@@ -1,0 +1,201 @@
+header {
+  z-index: 10;
+  --text: #25283d;
+  /* --text: #f4f4f4; */
+  --text-inverse: #333;
+  --background: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: background 250ms ease-in;
+  background: var(--background);
+  color: var(--text);
+}
+.site-logo {
+  --trasparent-color: transparent;
+  color: var(--trasparent-color);
+}
+.site-logo > div {
+  background-image: url("../image/La.svg");
+  background-size: contain;
+  width: 3.5rem;
+  margin-bottom: 0.3rem;
+  aspect-ratio: 1/1;
+}
+.nav-scrolled-logo {
+  --trasparent-color: #333;
+}
+.nav-scrolled {
+  --text: #333;
+  --transparent-color: #333;
+  --text-inverse: #f4f4f4;
+  --background: #f4f4f4;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+}
+nav {
+  padding: 5px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.nav__list {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav__link {
+  --spacing: 1em;
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  padding: calc(var(--spacing) / 2) var(--spacing);
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+}
+header .menu_toggler {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+}
+@media only screen and (max-width: 540px) {
+  .nav__link {
+    color: white;
+  }
+  .nav__list {
+    display: block;
+  }
+  header .menu_toggler {
+    display: block;
+  }
+  header .hamburger {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 60px;
+    height: 60px;
+    /* background-color: var(--icon-color); */
+    padding: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  /* hamburger middle line */
+  .nav_wraper .hamburger > div {
+    position: relative;
+    width: 100%;
+    height: 3px;
+    background-color: var(--text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+  }
+  /* hamburger top and bottom line */
+  .nav_wraper .hamburger > div:before,
+  .nav_wraper .hamburger > div:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: -10px;
+    height: 3px;
+    width: 100%;
+    background: inherit;
+  }
+  /* Moves line down */
+  .nav_wraper .hamburger > div:before {
+    top: 10px;
+  }
+  /* Toggler Animate */
+
+  .nav_wraper .menu_toggler:checked + .hamburger > div {
+    background: white;
+    transform: rotate(135deg);
+  }
+
+  /* Turn Lines into x */
+  .nav_wraper .menu_toggler:checked + .hamburger > div:before,
+  .nav_wraper .menu_toggler:checked + .hamburger > div::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+
+  /* rotate on hover when checked  */
+  .nav_wraper .menu_toggler:checked:hover + .hamburger > div {
+    transform: rotate(225deg);
+  }
+  /* milestone above is just rotating hamburger  */
+  /* below is for the big menu  */
+  /* s h o w   m e n u */
+  .nav_wraper .menu_toggler:checked ~ .menu {
+    visibility: visible;
+  }
+  /* scale menu > div */
+  .nav_wraper .menu_toggler:checked ~ .menu > div {
+    transform: scale(1);
+    transition-duration: 0.7s;
+  }
+  /* see the links  */
+  .nav_wraper .menu_toggler:checked ~ .menu > div > div {
+    opacity: 1;
+    transition: opacity 0.4s ease;
+  }
+  .nav_wraper .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  /* overlay div */
+  .nav_wraper .menu > div {
+    background: rgba(24, 47, 51, 0.85);
+    border-radius: 50%;
+    width: 200vw;
+    height: 200vw;
+    display: flex;
+    /* why */
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    transition: all 0.4s ease;
+  }
+  .nav_wraper .menu > div > div {
+    text-align: center;
+    max-width: 90vw;
+    max-height: 100vh;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  .nav_wraper .menu > div > div > ul > li {
+    list-style: none;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    padding: 1rem;
+    cursor: pointer;
+  }
+  .nav_wraper .menu > div > div > ul > .current_region {
+    color: var(--bg-color);
+    transition: color 0.2s ease;
+  }
+}

@@ -1,0 +1,33 @@
+.forthSection {
+  display: flex;
+  background: var(--bgcolor);
+  background-size: 300px;
+  background-blend-mode: hard-light;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: var(--textcolor);
+  text-align: center;
+}
+.forthSection__Container {
+  padding: 80px 0;
+  margin: auto;
+}
+.articleImage {
+  min-height: 300px;
+  width: 100%;
+  background: url(../image/pngwing.com.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 20px;
+}
+.articleButton {
+  margin-top: 20px;
+  border: white 2px solid;
+  color: white;
+}
+.articleParagraph {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}

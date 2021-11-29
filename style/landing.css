@@ -1,0 +1,25 @@
+.home-intro {
+  user-select: none;
+  padding: 200px 0;
+  background: hsla(0, 0%, 100%, 0.212)
+    url("../image/cool-background\ \(1\).png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+  color: white;
+  /* text-align: center; */
+}
+.home-intro > div {
+  background: url("../image/Logo\ with\ text.svg");
+  width: 100%;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.home-intro > h2 {
+  font-size: 2rem;
+  font-weight: 100;
+  text-align: center;
+}

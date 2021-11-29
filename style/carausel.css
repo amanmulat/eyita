@@ -1,0 +1,207 @@
+.carousal_container {
+  width: 100%;
+  background-color: var(--bgcolor);
+  padding: 6rem 0;
+}
+.slideImage_box {
+  color: white;
+  max-width: 350px;
+  /* height: 400px; */
+  padding: 15rem 0 0;
+  background: url("../image/kefita.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 0.5rem;
+  box-shadow: 3px 10px 12px rgba(0, 0, 0, 0.5);
+  margin: 30px;
+  overflow: hidden;
+}
+.slideImage_box:hover,
+.slideImage_box:focus-within {
+  transform-style: preserve-3d;
+  transform: scale(1.02);
+  transition: all 0.5s ease;
+}
+.slide_content {
+  --padding: 1rem;
+  padding: var(--padding);
+  background: linear-gradient(
+    hsla(0, 0%, 0%, 0),
+    hsla(0, 0%, 0%, 0.3) 20%,
+    hsla(0, 0%, 0%, 0.6)
+  );
+}
+
+.slide_content > h3,
+p,
+button {
+  margin-bottom: 0.7rem;
+}
+
+.slide_content > p {
+  color: rgba(255, 255, 255, 0.801);
+}
+.slide_title {
+  position: relative;
+  width: max-content;
+  padding-bottom: 0.3rem;
+}
+.slide_title::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  background: var(--primaryColor);
+  width: calc(100% + var(--padding));
+  left: calc(var(--padding) * -1);
+  bottom: 0;
+  transform-origin: left;
+  transition: transform 500ms ease;
+}
+.slideImage_box:hover .slide_title::after,
+.slideImage_box:focus-within .slide_title::after {
+  transform: scaleX(1);
+}
+.slider_li {
+  cursor: pointer;
+}
+
+@media (hover) {
+  .slide_content {
+    transition: transform 500ms ease;
+    transform: translateY(70%);
+  }
+  .slideImage_box:hover .slide_content,
+  .slideImage_box:focus-within .slide_content {
+    transform: translateY(0);
+    transition-delay: 500ms;
+  }
+  .slideImage_box:focus-within .slide_content {
+    transition-duration: 0ms;
+  }
+  .slide_content > *:not(.slide_title) {
+    opacity: 0;
+    transition: opacity 500ms ease;
+  }
+  .slideImage_box:hover .slide_content > *:not(.slide_title),
+  .slideImage_box:focus-within .slide_content > *:not(.slide_title) {
+    opacity: 1;
+    transition-delay: 1000ms;
+  }
+  .slide_title::after {
+    transform: scaleX(0);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+    transition-delay: 0ms !important;
+  }
+}
+/* the above is styling for the card and the card content  */
+/* styling for the pop up tour */
+.popup_div {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--primaryColor_opacity_5);
+  z-index: 11;
+}
+.popup_div > div {
+  background: rgba(24, 47, 51, 0.85);
+  width: 100%;
+  height: 100%;
+  transition: all 0.4s ease;
+}
+
+.close_popup {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 60px;
+  height: 60px;
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.close_popup > div {
+  position: relative;
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+.popup_div .close_popup > div:before,
+.popup_div .close_popup > div:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  height: 3px;
+  width: 100%;
+  background: inherit;
+}
+/* Moves line down */
+.popup_div .close_popup > div:before {
+  top: 10px;
+}
+.carousal_container .tour_checkbox:checked + .popup_div .close_popup > div {
+  background: rgb(235, 235, 235);
+  transform: rotate(135deg);
+}
+.carousal_container
+  .tour_checkbox:checked
+  + .popup_div
+  .close_popup
+  > div::before,
+.carousal_container
+  .tour_checkbox:checked
+  + .popup_div
+  .close_popup
+  > div::after {
+  top: 0;
+  background-color: var(--primaryColor);
+  transform: rotate(90deg);
+}
+/* to add or remove this classes on  */
+.makeVisible {
+  visibility: visible;
+}
+.makeHidden {
+  visibility: hidden;
+}
+/* available projects */
+.tour_container {
+  display: flex;
+}
+.project1,
+.project2,
+.project3,
+.project4 {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.carousal_container .tour_checkbox:checked + .popup_div {
+  visibility: visible;
+}
+/* .carousal_container .tour_checkbox:checked + .popup_div > div {
+  transform: scale(1);
+  transition-duration: 0.7s;
+} */

@@ -1,0 +1,31 @@
+.benefitsSection {
+  overflow: hid;
+  padding: 6rem 0;
+  width: 100%;
+}
+
+.benefit__bodys {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1.5rem;
+}
+.benefit_child {
+  flex: 1 1 50px;
+  padding: 0.6rem 0;
+}
+.benefit_child_header {
+  display: flex;
+  font-size: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+.benefit_child_header_icon {
+  margin-right: 1rem;
+  background: url(../image/360-icon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 3rem;
+  height: 3rem;
+}
+.benefit_child_description {
+  color: rgb(56, 56, 56);
+}

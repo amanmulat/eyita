@@ -18,14 +18,31 @@ a {
   --textColor: hsl(0, 0%, 0%);
   --grayColor: hsl(212, 11%, 50%);
   --primaryColor: hsl(233, 24%, 19%);
-  --primaryColor-100: hsla(232, 15%, 29%, 0.493);
-  --primaryColor_opacity_5: hsla(232, 24%, 19%, 0.212);
-
+  --primaryColor-hover: hsl(233, 40%, 39%);
+  --primaryColor-100: hsla(0, 0%, 50%, 0.493);
+  --primaryColor_opacity_5: hsla(232, 24%, 19%, 0.808);
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
     Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
-
+.mainButton {
+  cursor: pointer;
+  letter-spacing: 1px;
+  border-radius: 10px;
+  box-shadow: none;
+  background-color: var(--primaryColor);
+  outline: none;
+  padding: 0.6rem 1rem;
+  color: white;
+  box-shadow: 3px 6px 8px rgba(0, 0, 0, 0.5);
+  font-weight: 100;
+  border: none;
+  text-transform: uppercase;
+  transition: all 0.3s linear;
+}
+.mainButton:hover {
+  background-color: var(--primaryColor-hover);
+}
 .outline__button {
   cursor: pointer;
   outline: none;
@@ -46,7 +63,6 @@ a {
   color: var(--primaryColor);
   background: var(--primaryColor);
   border-color: white;
-  transition: all 0.2s linear;
 }
 .solid__button {
   cursor: pointer;

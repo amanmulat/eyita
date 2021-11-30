@@ -1,8 +1,12 @@
 .home-intro {
   user-select: none;
-  padding: 200px 0;
-  background: hsla(0, 0%, 100%, 0.212)
-    url("../image/cool-background\ \(1\).png");
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: hsl(0, 0%, 73%)
+    url("../image/alexandra-gorn-JIUjvqe2ZHg-unsplash.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -10,16 +14,41 @@
   color: white;
   /* text-align: center; */
 }
-.home-intro > div {
-  background: url("../image/Logo\ with\ text.svg");
-  width: 100%;
-  height: 100px;
+.home-intro > .brandText {
+  background: url("../image/Whtie\ logo\ Text.svg");
+  width: 80vw;
+  max-width: 700px;
+  aspect-ratio: 16/3;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+  margin-bottom: 1rem;
 }
-.home-intro > h2 {
-  font-size: 2rem;
+.whatWeDo {
+  max-width: 80vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+.whatWeDo > h2 {
+  margin: 0 0.4rem;
   font-weight: 100;
+  font-size: 18px;
+  color: hsla(0, 0%, 100%, 0.723);
   text-align: center;
+  align-self: center;
+}
+.whatWeDo .break {
+  width: 7px;
+  height: 7px;
+  background-color: white;
+  margin: 0 0.4rem;
+  border-radius: 50%;
+}
+@media only screen and (max-width: 529px) {
+  .whatWeDo .break {
+    display: none;
+  }
 }

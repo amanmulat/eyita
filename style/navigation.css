@@ -1,6 +1,6 @@
 header {
   z-index: 10;
-  --text: #25283d;
+  --text: #ffffff;
   /* --text: #f4f4f4; */
   --text-inverse: #333;
   --background: transparent;
@@ -17,20 +17,22 @@ header {
   color: var(--trasparent-color);
 }
 .site-logo > div {
-  background-image: url("../image/La.svg");
+  background-image: url("../image/logo\ with\ text.svg");
   background-size: contain;
-  width: 3.5rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 10rem;
+  height: 3rem;
   margin-bottom: 0.3rem;
-  aspect-ratio: 1/1;
 }
 .nav-scrolled-logo {
   --trasparent-color: #333;
 }
 .nav-scrolled {
-  --text: #333;
+  --text: white;
   --transparent-color: #333;
   --text-inverse: #f4f4f4;
-  --background: #f4f4f4;
+  --background: var(--primaryColor);
   box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
 }
 nav {
@@ -52,13 +54,14 @@ nav {
 .nav__link {
   --spacing: 1em;
   text-decoration: none;
+  font-weight: 100;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
   color: inherit;
   display: inline-block;
   padding: calc(var(--spacing) / 2) var(--spacing);
   position: relative;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 0.9rem;
 }
 header .menu_toggler {
   display: none;
@@ -168,7 +171,7 @@ header .menu_toggler {
   }
   /* overlay div */
   .nav_wraper .menu > div {
-    background: rgba(24, 47, 51, 0.85);
+    background: var(--primaryColor_opacity_5);
     border-radius: 50%;
     width: 200vw;
     height: 200vw;

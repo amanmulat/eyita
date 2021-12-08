@@ -17,5 +17,11 @@
 }
 .about_second {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+}
+.about_second > h2 {
+  margin-left: 0;
+  text-align: left;
 }

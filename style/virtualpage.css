@@ -1,0 +1,21 @@
+.virtualPage {
+  position: relative;
+  height: calc(100vh - 40px);
+  width: 100%;
+  background-color: black;
+  margin-top: 4rem;
+}
+.virtualPage > div {
+  position: absolute;
+  z-index: 0;
+}
+.spinnerpage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.iframe_container {
+  z-index: 3;
+  height: 100%;
+  width: 100%;
+}

@@ -8,8 +8,9 @@ header {
   top: 0;
   left: 0;
   right: 0;
+  height: 4rem;
   transition: background 250ms ease-in;
-  background: var(--background);
+  background: var(--primaryColor);
   color: var(--text);
 }
 .site-logo {
@@ -62,18 +63,6 @@ nav {
   padding: calc(var(--spacing) / 2) var(--spacing);
   position: relative;
   text-transform: uppercase;
-}
-.nav__list-item {
-  transition: all 0.3s ease-in;
-}
-.nav__list-item.active {
-  transition: all 0.3s ease-in;
-  background-color: var(--primaryColor-hover);
-  border-radius: 30px;
-}
-.nav__list-item:hover {
-  background-color: var(--primaryColor-hover);
-  border-radius: 30px;
 }
 header .menu_toggler {
   display: none;
@@ -206,9 +195,8 @@ header .menu_toggler {
     list-style: none;
     color: var(--text-color);
     font-size: 1.5rem;
-    padding: 0.1rem;
+    padding: 1rem;
     cursor: pointer;
-    margin: 2rem;
   }
   .nav_wraper .menu > div > div > ul > .current_region {
     color: var(--bg-color);

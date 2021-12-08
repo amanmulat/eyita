@@ -1,6 +1,5 @@
 .forthSection {
   display: flex;
-  background: var(--bgcolor);
   background-size: 300px;
   background-blend-mode: hard-light;
   background-repeat: no-repeat;

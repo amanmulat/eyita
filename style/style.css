@@ -19,11 +19,25 @@ a {
   --grayColor: hsl(212, 11%, 50%);
   --primaryColor: hsl(233, 24%, 19%);
   --primaryColor-hover: hsl(233, 40%, 39%);
+  --primaryColor-hover: #8b85c1;
   --primaryColor-100: hsla(0, 0%, 50%, 0.493);
   --primaryColor_opacity_5: hsla(232, 24%, 19%, 0.808);
+  scroll-behavior: smooth;
+  scroll-padding-top: 50px;
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
     Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 300;
+}
+/* :target:before {
+  content: "";
+  display: block;
+  height: 100px;
+  margin: -100px 0 0;
+} */
+
+.contentBody section:nth-child(even) {
+  background-color: var(--bgcolor);
 }
 .mainButton {
   cursor: pointer;
@@ -93,10 +107,18 @@ a {
 .headerh2 {
   letter-spacing: 3px;
   text-align: center;
-  font-size: 1.8rem;
-  max-width: 30ch;
+  font-size: 2rem;
+  font-weight: 400;
+  max-width: 40ch;
   margin: 0 auto;
   padding-bottom: 1.5rem;
+}
+
+.headerh3 {
+  font-weight: 400;
+  font-size: 1.4rem;
+  max-width: 30ch;
+  color: rgba(0, 0, 0, 0.842);
 }
 .container {
   padding-right: 15px;

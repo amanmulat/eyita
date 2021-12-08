@@ -1,0 +1,35 @@
+.usedfor {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 6rem 0;
+}
+.usedfor_logo {
+  background: url(../image/darkblue\ logo.png);
+  margin-bottom: 2rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 300px;
+  aspect-ratio: 1/1;
+}
+.checkCircle {
+  color: greenyellow;
+  font-size: 1.2rem;
+}
+.usedfor_list > li {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+}
+.usedfor_description {
+  padding-left: 1rem;
+}
+.usedfor_description > h2 {
+  text-align: left;
+  font-size: 1.5rem;
+}
+.usedfor_description p {
+  padding-left: 10px;
+  margin-bottom: 0;
+}

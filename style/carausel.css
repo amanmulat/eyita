@@ -1,7 +1,6 @@
 .carousal_container {
   width: 100%;
-  background-color: var(--bgcolor);
-  padding: 6rem 0;
+  padding: 3rem 0;
 }
 .tour_checkbox {
   display: none;

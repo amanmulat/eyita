@@ -1,7 +1,6 @@
 const header = document.querySelector("header");
 const logo = document.querySelector('.site-logo')
 const sectionOne = document.querySelector(".home-intro");
-console.log('is connected')
 const sectionOneOptions = {
   rootMargin: "-200px 0px 0px 0px"
 };
@@ -20,9 +19,11 @@ const sectionOneObserver = new IntersectionObserver(function(
     }
   });
 },
-sectionOneOptions);
+  sectionOneOptions);
+if (sectionOne) {
+  sectionOneObserver.observe(sectionOne);
+}
 
-sectionOneObserver.observe(sectionOne);
 
 
 
@@ -59,43 +60,69 @@ window.addEventListener('resize', function () {
 });
 
 //the functions to close and open the tour 
-const tour_checkbox = document.querySelector('.tour_checkbox')
-const close_popup = document.querySelector(".close_popup")
-const slider_li1 = document.querySelector('.slider_li1_button')
-const slider_li2 = document.querySelector('.slider_li2_button')
-const popup_div = document.querySelector('.popup_div')
-const project1 = document.querySelector('.project1')
-const project2 = document.querySelector('.project2')
-const project3 = document.querySelector('.project3')
-const project4 = document.querySelector('.project4')
+// const tour_checkbox = document.querySelector('.tour_checkbox')
+// const close_popup = document.querySelector(".close_popup")
+// const slider_li1 = document.querySelector('.slider_li1_button')
+// const slider_li2 = document.querySelector('.slider_li2_button')
+// const popup_div = document.querySelector('.popup_div')
+// const project1 = document.querySelector('.project1')
+// const project2 = document.querySelector('.project2')
+// const project3 = document.querySelector('.project3')
+// const project4 = document.querySelector('.project4')
 
-close_popup.addEventListener('click', () => {
-  if (tour_checkbox.checked === true) {
-    project1.classList.add('makeHidden')
-    project2.classList.add('makeHidden')
-    tour_checkbox.checked = false
-    // popup_div.classList.remove('makeVisible')
-  }
-  else {
-    tour_checkbox.checked=true
-  }
-})
+// close_popup.addEventListener('click', () => {
+//   if (tour_checkbox.checked === true) {
+//     project1.classList.add('makeHidden')
+//     project2.classList.add('makeHidden')
+//     tour_checkbox.checked = false
+//     // popup_div.classList.remove('makeVisible')
+//   }
+//   else {
+//     tour_checkbox.checked=true
+//   }
+// })
 
-slider_li1.addEventListener('click', () => {
-  if (tour_checkbox.checked === true) {
-    tour_checkbox.checked=false
-  }
-    else {
-      project1.classList.remove('makeHidden')
-    tour_checkbox.checked=true
-  }
-})
-slider_li2.addEventListener('click', () => {
-  if (tour_checkbox.checked === true) {
-    tour_checkbox.checked=false
-  }
-    else {
-      project2.classList.remove('makeHidden')
-    tour_checkbox.checked=true
-  }
-})
+// slider_li1.addEventListener('click', () => {
+//   if (tour_checkbox.checked === true) {
+//     tour_checkbox.checked=false
+//   }
+//     else {
+//     project1.classList.remove('makeHidden')
+//     localStorage.setItem('project' , "li1")
+//     tour_checkbox.checked=true
+//   }
+// })
+// slider_li2.addEventListener('click', () => {
+//   if (tour_checkbox.checked === true) {
+//     tour_checkbox.checked=false
+//   }
+//     else {
+//       project2.classList.remove('makeHidden')
+//     tour_checkbox.checked=true
+//   }
+// })
+//active sections
+const sections = document.querySelectorAll('section')
+const navLi = document.querySelectorAll(".nav__list-item")
+
+window.onscroll = () => {
+ var current = "";
+
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop;
+    if (scrollY >= sectionTop - 60) {
+      current = section.getAttribute("id") + "li";
+     
+    }
+      
+  });
+
+  navLi.forEach((li) => {
+    li.classList.remove("active");
+ 
+    if (li.id == current) {
+      li.classList.add("active");
+    }
+  });
+ 
+}

@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme-color" content="#25283c">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/all.min.css">
+
     <link rel="icon" href="image/whtie-logo.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,9 +16,11 @@
     <link rel="stylesheet" href="./style/navigation.css">
     <link rel="stylesheet" href="./style/landing.css">
     <link rel="stylesheet" href="./style/sectionTwo.css">
+    <link rel="stylesheet" href="./style/services.css">
     <link rel="stylesheet" href="./style/sectionThree.css">
     <link rel="stylesheet" href="./style/sectionForth.css">
     <link rel="stylesheet" href="./style/Benefits.css">
+    <link rel="stylesheet" href="./style/usedfor.css">
     <link rel="stylesheet" href="style/carausel.css">
     <link rel="stylesheet" href="style/lightslider.css">
     <link rel="stylesheet" href="style/lightslider.css">
@@ -37,9 +42,11 @@
                 <div>
                     <div>
                         <ul class="nav__list">
-                            <li  class="nav__list-item"><a class="nav__link" href="#">Home</a></li>
-                            <li  class="nav__list-item"><a class="nav__link" href="#">About</a></li>
-                            <li  class="nav__list-item"><a class="nav__link " href="#">Contact</a></li>
+                           
+                            <li   id="homeli"class="nav__list-item"><a class="nav__link" href="#home">Home</a></li>
+                            <li id="servicesli" class="nav__list-item"><a class="nav__link " href="#services">Services</a></li>
+                            <li   id="aboutli"class="nav__list-item"><a class="nav__link" href="#about">About Us</a></li>
+                            <li   id="projectli"class="nav__list-item"><a class="nav__link " href="#project">Project</a></li>
                         </ul>
                     </div>
                 </div>
@@ -47,23 +54,53 @@
         </nav>
     </header>
     <main>
-        <section class="home-intro">
+        <section id="home" class="home-intro">
             <div class="brandText"></div>
             <div class="whatWeDo"><h2>Virtual Tour</h2><div class="break"></div><h2>Real Estate</h2><div class="break"></div><h2>Web Development</h2></div>
-            <button class="mainButton">Take a Tour</button>
+            
         </section>
-        <section class="about">
-            <div class="about_container container">
-                <div class="about_first">
+        <div class="contentBody">
+        <section id="services" class="services">
+            <div class="serviceCard_container container">
+                <div class="serviceCard">
+                    <i class="fas fa-camera serviceIcons"></i>
+                    <div class="serviceCard_description">
+                        <h3 class="headerh3">Architecture and Realestate Photography</h3>
+                        <p>It is said that a picture is worth a thousand words.</br>Lets make it stunning!</p>
+                    </div>
                 </div>
-                <div class="about_second paragraph">
-                    360° Virtual Reality (VR) Tours became a perfect marketing tool in real estate and design. It is particularly useful for
-                    those projects that are still in the development stage or under construction. Regardless of the project location or its
-                    stage of completion, a client or an investor has an opportunity not only to see how the project will look like.
-                </div>                
+                <div class="serviceCard">
+                    <i class="far fa-image serviceIcons"></i>
+                    <div class="serviceCard_description">
+                        <h3 class="headerh3">360° Photo and Video</h3>
+                        <p>Using Virtual tour, you can tell the whole story.</br>Stand out!</p>
+                    </div>
+                </div>
+                <div class="serviceCard">
+                    <i class="fas fa-laptop-code serviceIcons"></i>
+                    <div class="serviceCard_description">
+                        <h3 class="headerh3">Web Development</h3>
+                        <p>Lets secure your place on the Internet.</br>Everybody is on the Internet.</p>
+                    </div>
+                </div>
             </div>
         </section>
-        <section class="forthSection">
+        <section id="about" class="about">
+            <div class="about_container container">
+                <div class="about_first"></div>
+                <div class="about_second">
+                    <h2 class="headerh2">About us</h2>
+                    <div class=" paragraph">
+                        360° Virtual Reality (VR) Tours became a perfect marketing tool in real estate and design. It is particularly useful for
+                        those projects that are still in the development stage or under construction. Regardless of the project location or its
+                        stage of completion, a client or an investor has an opportunity not only to see how the project will look like.
+                    </div>   
+                </div>
+                             
+            </div>
+        </section>
+        
+        <!-- <section class="forthSection">
             <div class="container forthSection__Container">
                 <div class="articleImage">
                         
@@ -78,87 +115,101 @@
                     Read More
                 </button> 
             </div>
-        </section>
-        <section class="benefitsSection">
+        </section> -->
+        <section id="about" class="benefitsSection">
             <div class="container ">
-                  <div class="headerh2">
-                      <h2>Benefits you get when using our services</h2>
+                  <div>
+                      <h2  class="headerh2">Benefits you get when using our services</h2>
                   </div>
                   <div class="benefit__bodys">
                         <div class="benefit_child">
                             <div class="benefit_child_header">
-                                <div class="benefit_child_header_icon"></div>
-                                <h3>Best Quality</h3>
+                                <h3 class="headerh3">Clarity</h3>
                             </div>
                             <p class="benefit_child_description paragraph">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae quasi nostrum dolore. Corrupti necessitatibus sint obcaecati accusantium recusandae maxime eos animi impedit ullam dolorum?
+                                Eyita will effectively communicate your vision to your customers by allowing them to interact with your product virtually.
                             </p>
                         </div>
                         <div class="benefit_child">
                             <div class="benefit_child_header">
-                                <div class="benefit_child_header_icon"></div>
-                                <h3>Best Quality</h3>
+                                <h3 class="headerh3">Build Assurance</h3>
                             </div>
                             <p class="benefit_child_description paragraph">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae quasi nostrum dolore. Corrupti necessitatibus
-                                sint obcaecati accusantium recusandae maxime eos animi impedit ullam dolorum?
+                            Boosts client interaction with the your service or product as a result will generates more trust with your customers.
                             </p>
                         </div>
                         <div class="benefit_child">
                             <div class="benefit_child_header ">
-                                <div class="benefit_child_header_icon"></div>
-                                <h3>Best Quality</h3>
+                                <h3 class="headerh3">Best Quality</h3>
                             </div>
                             <p class="benefit_child_description paragraph">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae quasi nostrum dolore. Corrupti necessitatibus
-                                sint obcaecati accusantium recusandae maxime eos animi impedit ullam dolorum?
+                                Our skilled team with cutting-edge technologies can only ensure the finest work.
                             </p>
                         </div>
                   </div>
             </div>
         </section >
-
-        <section  class="carousal_section" >
-            <div class="carousal_container">
-                <div class="headerh2 projectsHeader">
-                    <h2>Projects</h2>
+        <section id="about" class="usedfor_container ">
+            <div class="container">
+                <div class="usedfor">
+                    <div class="usedfor_logo"></div>
+                    <div class="usedfor_description">
+                        <h2 class="headerh2">Enhance your customers experience for your:</h2>
+                        <ul class="usedfor_list">
+                            <li><i class="fas fa-check-circle checkCircle"></i><p>Realestate and propery managemet</p></li>
+                            <li><i class="fas fa-check-circle checkCircle"></i><p>Hotel and Resort</p></li>
+                            <li><i class="fas fa-check-circle checkCircle"></i><p>Architecture firms</p></li>
+                            <li><i class="fas fa-check-circle checkCircle"></i><p>Architecture firms</p></li>
+                        </ul>
+                    </div>                    
                 </div>
-                <input type="checkbox" class="tour_checkbox" />
-                <div class="popup_div">
-                    <div>
-                        <div class="close_popup">
-                            <div></div>
-                        </div>
-                        <div class="tour_container">
 
-                        </div>
-                        <div class="project1 makeHidden">
-                            <div id="yvapw-t220OJ5Iae" autoplay="false" style="width: 100%; height: 100%"></div>
-                            <script> (function (id, rd, v) { var w = window, d = document, t = 'script', src = 'https://www.klapty.com/tour/tunnel/', v = v || '1.1.0', r = 'yvap' + v; w[r] = w[r] || { instance: null, l: [], s: null }; w[r].l.push(arguments); append = function () { while (w[r].l.length) { w[r].instance.append(w[r].l.shift()) } }; if (w[r].s === null) { w[r].s = false; var a = d.createElement(t), m = d.getElementsByTagName(t)[0]; a.async = 1; a.onload = function (f) { w[r].s = true; w[r].instance = new YVAppendPano(src); append() }; a.src = src + '_app/append-v' + v + '.js?_' + (new Date().getTime()); m.parentNode.insertBefore(a, m); var l = d.createElement('link'); l.rel = 'stylesheet'; l.type = 'text/css'; l.href = src + '_app/append-v' + v + '.css?_' + (new Date().getTime()); d.getElementsByTagName('HEAD')[0].appendChild(l); } else if (w[r].s === true) { append() }; })('t220OJ5Iae');</script>
-                        </div>
-                        <div class="project2 makeHidden">
-                            
-                            <iframe style="max-width:100%;width:100%;height:100%;" src="https://www.klapty.com/tour/tunnel/DkH0o5PFrX"
-                                frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" allowvr="true"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; vr"></iframe>
-                        </div>
+            </div>
+            
+        </section>
+        <section id="project" class="carousal_section" >
+            <div class="container">
+                <div class="carousal_container ">
+                    <div class="projectsHeader">
+                        <h2 class="headerh2">Projects</h2>
                     </div>
-                    
-                </div>
-                <!-- slider box -->
-                <div class="slider_container">
-                    <ul id="lightSlider" >
-                        <li class="slider_li1" >
+                    <!-- <input type="checkbox" class="tour_checkbox" />
+                    <div class="popup_div">
+                        <div>
+                            <div class="close_popup">
+                                <div></div>
+                            </div>
+                            <div class="tour_container">
+                
+                            </div>
+                            <div class="project1 makeHidden">
+                                <div id="yvapw-t220OJ5Iae" autoplay="false" style="width: 100%; height: 100%"></div>
+                                <script> (function (id, rd, v) { var w = window, d = document, t = 'script', src = 'https://www.klapty.com/tour/tunnel/', v = v || '1.1.0', r = 'yvap' + v; w[r] = w[r] || { instance: null, l: [], s: null }; w[r].l.push(arguments); append = function () { while (w[r].l.length) { w[r].instance.append(w[r].l.shift()) } }; if (w[r].s === null) { w[r].s = false; var a = d.createElement(t), m = d.getElementsByTagName(t)[0]; a.async = 1; a.onload = function (f) { w[r].s = true; w[r].instance = new YVAppendPano(src); append() }; a.src = src + '_app/append-v' + v + '.js?_' + (new Date().getTime()); m.parentNode.insertBefore(a, m); var l = d.createElement('link'); l.rel = 'stylesheet'; l.type = 'text/css'; l.href = src + '_app/append-v' + v + '.css?_' + (new Date().getTime()); d.getElementsByTagName('HEAD')[0].appendChild(l); } else if (w[r].s === true) { append() }; })('t220OJ5Iae');</script>
+                            </div>
+                            <div class="project2 makeHidden">
+                
+                                <iframe style="max-width:100%;width:100%;height:100%;"
+                                    src="https://www.klapty.com/tour/tunnel/DkH0o5PFrX" frameborder="0" allowfullscreen="true"
+                                    mozallowfullscreen="true" webkitallowfullscreen="true" allowvr="true"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; vr"></iframe>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- slider box -->
+                    <div class="slider_container">
+                        <ul id="lightSlider">
+                            <li class="slider_li1">
                                 <div class="slideImage_box">
                                     <div class="slide_content">
                                         <h3 class="slide_title">Kefeta</h3>
                                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet minus nostrum harum!</p>
-                                        <button class="mainButton slider_li1_button">Take a Tour</button>
+                                        <a href="./virtualpage one.html"><button class="mainButton slider_li1_button">Take a
+                                                Tour</button></a>
                                     </div>
                                 </div>
-                        </li>
-                        <li class="slider_li2">
-                            
+                            </li>
+                            <li class="slider_li2">
+                
                                 <div class="slideImage_box">
                                     <div class="slide_content">
                                         <h3 class="slide_title">Kuncho Interior Design</h3>
@@ -166,38 +217,42 @@
                                         <button class="mainButton slider_li2_button">Take a Tour</button>
                                     </div>
                                 </div>
-
-                        </li>
-                        <li class="slider_li">
-                            <a href="https://www.klapty.com/tour/t220OJ5Iae">
-                                <div class="slideImage_box">
-                                    <div class="slide_content">
-                                        <h3 class="slide_title">Kefeta</h3>
-                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet minus nostrum harum!</p>
-                                        <button class="mainButton">Take a Tour</button>
+                
+                            </li>
+                            <li class="slider_li">
+                                <a href="https://www.klapty.com/tour/t220OJ5Iae">
+                                    <div class="slideImage_box">
+                                        <div class="slide_content">
+                                            <h3 class="slide_title">Kefeta</h3>
+                                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet minus nostrum harum!
+                                            </p>
+                                            <button class="mainButton">Take a Tour</button>
+                                        </div>
                                     </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="slider_li">
-                            <a href="https://www.klapty.com/tour/t220OJ5Iae">
-                                <div class="slideImage_box">
-                                    <div class="slide_content">
-                                        <h3 class="slide_title">Kefeta</h3>
-                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet minus nostrum harum!</p>
-                                        <button class="mainButton">Take a Tour</button>
+                                </a>
+                            </li>
+                            <li class="slider_li">
+                                <a href="https://www.klapty.com/tour/t220OJ5Iae">
+                                    <div class="slideImage_box">
+                                        <div class="slide_content">
+                                            <h3 class="slide_title">Kefeta</h3>
+                                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet minus nostrum harum!
+                                            </p>
+                                            <button class="mainButton">Take a Tour</button>
+                                        </div>
                                     </div>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+
         </section>
-        <section class="client">
+        <section id="client" class="client">
             <div class=" container">
-                <div class="headerh2">
-                    <h2 >
+                <div >
+                    <h2 class="headerh2">
                         Clients
                     </h2>
                 </div>
@@ -223,6 +278,7 @@
                 </div>
             </div>
         </section>
+        </div>
         <footer class="footer">
             <div class="footercontaner container">
               <div class="footerSections">
@@ -249,13 +305,13 @@
                     <li><a href="#">Instagram</a></li>
                 </ul>
             </div>
-            <div class="footerSections">
+            <!-- <div class="footerSections">
                 <h3>Join out Newsletter</h3>
                 <form action="#" class="form">
                     <input type="email" placeholder="Enter Your Email" required>
                     <div class="footer_button"><input type="submit" value="Subscribe"></div>
                 </form>
-            </div>
+            </div> -->
             </div>
             
         </footer>

@@ -16,7 +16,11 @@
   padding: 0.6rem 0;
   flex-basis: 18%;
 }
+.footerSections > h3 {
+  font-size: 1rem;
+}
 .footersection_content a {
+  font-size: 0.8rem;
   opacity: 0.6;
   line-height: 30px;
   color: white;

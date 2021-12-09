@@ -24,4 +24,8 @@
  .client{
    padding: 3rem 0;
  }
+ .clientLogo {
+  opacity: 70%;
+  width: 90px;
+}
    }

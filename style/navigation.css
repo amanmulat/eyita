@@ -86,7 +86,7 @@ header .menu_toggler {
   height: 50px;
   opacity: 0;
 }
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 600px) {
   .nav__link {
     color: white;
   }

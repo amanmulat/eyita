@@ -20,3 +20,8 @@
   opacity: 70%;
   width: 120px;
 }
+@media only screen and (max-width: 600px) {
+ .client{
+   padding: 3rem 0;
+ }
+   }

@@ -29,3 +29,14 @@
   font-size: 5rem;
   color: var(--primaryColor);
 }
+@media only screen and (max-width: 600px) {
+ .serviceCard_description{
+   padding: 0.7rem;
+ }
+ .serviceIcons {
+  font-size: 3.5rem;
+}
+.serviceCard{
+  padding: 0;
+}
+  }

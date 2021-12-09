@@ -33,3 +33,11 @@
   padding-left: 10px;
   margin-bottom: 0;
 }
+@media only screen and (max-width: 600px) {
+  .usedfor{
+    padding: 3rem 0;
+  }
+  .usedfor_logo{
+    width: 200px;
+  }
+   }

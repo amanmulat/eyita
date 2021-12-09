@@ -141,3 +141,8 @@ a {
     width: 1170px;
   }
 }
+@media only screen and (max-width: 600px) {
+  .headerh2{
+    padding-bottom: 1rem;
+  }
+}

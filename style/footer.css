@@ -49,9 +49,21 @@
 .footer_button :hover {
   background: var(--primaryColor-hover);
 }
-@media only screen and (max-width: 540px) {
+.footerSlogan{
+  text-align: right;
+  font-weight: 600;
+  font-size: 2rem;
+  opacity: 70%;
+}
+@media only screen and (max-width: 570px) {
   footer .footerSections {
     flex-basis: 100%;
     margin: 0 auto;
+  }
+  .footerSlogan{
+    text-align: left;
+    font-weight: 600;
+    font-size: 2rem;
+    opacity: 70%;
   }
 }

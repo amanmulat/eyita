@@ -5,13 +5,14 @@
   padding: 6rem 0;
 }
 .usedfor_logo {
-  background: url(../image/darkblue\ logo.png);
-  margin-bottom: 2rem;
+  background: url(../image/darkbluelogo.svg);
+  margin-right: 2rem;
+  margin-left: 2rem;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   width: 300px;
-  aspect-ratio: 1/1;
+  aspect-ratio: 1/1.03;
 }
 .checkCircle {
   color: greenyellow;
@@ -34,10 +35,11 @@
   margin-bottom: 0;
 }
 @media only screen and (max-width: 600px) {
-  .usedfor{
+  .usedfor {
     padding: 3rem 0;
   }
-  .usedfor_logo{
+  .usedfor_logo {
     width: 200px;
+    margin-bottom: 2rem;
   }
-   }
+}

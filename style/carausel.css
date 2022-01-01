@@ -18,6 +18,14 @@
   margin: 30px;
   overflow: hidden;
 }
+.box_two {
+  background: url("../image/transportaion.png");
+  background-position: center;
+}
+.box_three {
+  background: url("../image/weshet.png");
+  background-position: center;
+}
 .slideImage_box:hover,
 .slideImage_box:focus-within {
   transform-style: preserve-3d;
@@ -42,6 +50,7 @@
 }
 
 .slide_content > p {
+  margin-bottom: 8px;
   color: rgba(255, 255, 255, 0.801);
 }
 .slide_title {
@@ -210,6 +219,6 @@
 } */
 @media only screen and (max-width: 600px) {
   .slideImage_box {
-    width:275px;
+    width: 275px;
   }
-   }
+}

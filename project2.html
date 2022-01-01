@@ -13,12 +13,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Ethiopic:wght@100;300;500;600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./style/style.css">
-    <link rel="stylesheet" href="./style/navigation virtual.css">
+    <link rel="stylesheet" href="./style/navigation copy.css">
     <link rel="stylesheet" href="./style/virtualpage.css">
+    <link rel="stylesheet" href="./style/spinner.css">
     <link rel="stylesheet" href="style/footer.css">
 
 
-    <title>Eyita</title>
+    <title>Eyita: Projects</title>
 </head>
 
 <body>
@@ -35,9 +36,16 @@
                 <div>
                     <div>
                         <ul class="nav__list">
-                            <li class="nav__list-item"><a class="nav__link" href="#">Home</a></li>
-                            <li class="nav__list-item"><a class="nav__link" href="#">About</a></li>
-                            <li class="nav__list-item"><a class="nav__link " href="#">Contact</a></li>
+
+                            <li id="homeli" class="nav__list-item"><a class="nav__link" href="index.html#home">Home</a>
+                            </li>
+                            <li id="servicesli" class="nav__list-item"><a class="nav__link "
+                                    href="index.html#services">Services</a>
+                            </li>
+                            <li id="aboutli" class="nav__list-item"><a class="nav__link" href="index.html#about">About
+                                    Us</a></li>
+                            <li id="projectli" class="nav__list-item active"><a class="nav__link "
+                                    href="index.html#project">Project</a></li>
                         </ul>
                     </div>
                 </div>
@@ -45,10 +53,21 @@
         </nav>
     </header>
     <main>
-        <section class="virtualPage">
-            <iframe style="max-width:100%;width:100%;height:100%;" src="https://www.klapty.com/tour/tunnel/DkH0o5PFrX"
-                frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" allowvr="true"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; vr"></iframe>
+        <section id="project" class="virtualPage">
+            <div class="spinnerpage">
+                <div class="lds-ring">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="iframe_container">
+                <iframe style="max-width:100%;width:100%;height:100%;"
+                    src="https://surafel-zt.github.io/3dvista2/" frameborder="0" allowfullscreen="true"
+                    mozallowfullscreen="true" webkitallowfullscreen="true" allowvr="true"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; vr"></iframe>
+            </div>
         </section>
         <footer class="footer">
             <div class="footercontaner container">
@@ -87,10 +106,7 @@
 
         </footer>
     </main>
-    <script src="js/script.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="js/lightslider.js"></script>
-    <script src="js/carausel.js"></script>
+    <script src="js/scriptvr.js"></script>
 </body>
 
 </html>

@@ -1,6 +1,6 @@
 .virtualPage {
   position: relative;
-  height: calc(100vh - 40px);
+  height: calc(100vh - 4rem);
   width: 100%;
   background-color: black;
   margin-top: 4rem;

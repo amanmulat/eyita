@@ -1,0 +1,47 @@
+.example_container {
+  display: flex;
+  margin: 0 auto;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.iframe_container {
+  z-index: 3;
+  max-height: 80vh;
+  height: 40rem;
+  width: 100%;
+  flex-basis: 65%;
+}
+.example_textContainer {
+  flex-basis: 35%;
+  margin: auto 0;
+  padding-right: 1rem;
+}
+.example_textContainer > h2 {
+  text-align: left;
+}
+.example_section {
+  padding: 3rem 0;
+}
+@media only screen and (max-width: 780px) {
+  .iframe_container {
+    flex-basis: 90%;
+  }
+
+  .example_textContainer {
+    flex-basis: 100%;
+    padding-right: 0;
+    margin: 0 auto;
+  }
+  .example_textContainer > h2 {
+    padding-bottom: 0.5rem;
+  }
+  .example_textContainer > p {
+    padding-bottom: 1rem;
+  }
+  .footerSlogan {
+    text-align: left;
+    font-weight: 600;
+    font-size: 2rem;
+    opacity: 70%;
+  }
+}

@@ -26,6 +26,16 @@
   background: url("../image/weshet.png");
   background-position: center;
 }
+.box_four {
+  background: url("../image/biltigna\ ft\ ashara.png");
+  background-position: center;
+  background-size: cover;
+}
+.box_five {
+  background: url("../image/kuncho\ office.png");
+  background-position: center;
+  background-size: cover;
+}
 .slideImage_box:hover,
 .slideImage_box:focus-within {
   transform-style: preserve-3d;
